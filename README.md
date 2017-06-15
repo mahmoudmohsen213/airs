@@ -4,7 +4,6 @@
 Road segmentation is detecting roads in aerial images usually taken by satellites. Specifically, Given an aerial image, it is required to output a binary mask for the input image showing for each pixel if it belongs to a road or not.
 
 ## Solution
-
 A per-pixel-classification technique will be used to build the output binary mask, that is, each pixel is independently classified as part of a road or not.
 
 To classify pixel (x, y), the pixels contained in the surrounding window of a predefined side length ‘L’ centered at (x, y) will be used as features, so that the input features vector will contain the (r, g, b) values of all these pixels (including the current target pixel at (x, y)), which makes the features vector size = 3*L*L.
@@ -32,8 +31,12 @@ Classification of an input image is done using the fourth script, it takes the n
 [www.cs.toronto.edu/~vmnih/data/](https://www.cs.toronto.edu/~vmnih/data/)
 
 ## Samples
-
-
+#### Sample input
+![sample input](/image-input/10228690_15.jpg)
+#### Expected output
+![expected output](/image-output/10228690_15-01.jpg)
+#### Output
+![output](/image-output/10228690_15-02.jpg)
 
 ### Notes
 - The airs-dataset directory contains a set of images to show the correct directory structure expected by the scripts.
