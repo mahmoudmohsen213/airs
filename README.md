@@ -29,12 +29,12 @@ The third script is used to test the model accuracy, it loads the model and the 
 Classification of an input image is done using the fourth script, it takes the names of the input and output image names as command line arguments, it loads the model and the input image from the ‘image-input’ directory, generate the feature vector for each pixel, classify it using the loaded classifier, and generate the output image with zero/one value for each pixel based on the classifier prediction for that pixel, then it saves the generated image in ‘image-output’ directory using the output image name entered in the command line arguments.
 
 ## Dataset
-[dataset](https://www.cs.toronto.edu/~vmnih/data/).
+[www.cs.toronto.edu/~vmnih/data/](https://www.cs.toronto.edu/~vmnih/data/)
 
 ## Samples
 
 
 
 ### Notes
-- The airs-dataset directory contains a set images to show the correct directory strucure expected by the scripts.
+- The airs-dataset directory contains a set of images to show the correct directory structure expected by the scripts.
 - The images included in this repository are scaled down to reduce their size and should not be used to try the code, use the original dataset images.
