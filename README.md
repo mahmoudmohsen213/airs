@@ -38,10 +38,10 @@ As mentioned earlier, a per-pixel-classification technique is used, which means 
 The features considered in this model are the RGB values of the pixels surrounding each pixel, which are not enough because road pixels and non-road pixels made of the same material looks the same, for example road pixels and buildings or parking lots. A possible solution is to add a convolutional neural network as another layer to the model before the used neural network, the added CNN can segment the building based on other features and exclude them before further processing.
 
 ## Usage
-- Install python and Tensorflow as described [here](https://www.tensorflow.org/install/)
-- Instal pillow as described [here](http://pillow.readthedocs.io/en/3.0.x/installation.html)
+- Install python and Tensorflow as described [here](https://www.tensorflow.org/install/).
+- Instal pillow as described [here](http://pillow.readthedocs.io/en/3.0.x/installation.html).
 - Prepare the dataset in the directories contained in 'airs-dataset' directory. Each input image must have a corresponding binary (black and white) output image of the same exact dimensions in the corresponding output directory.
-- Run 'convertToFeatureFiles.py'. It should generate three csv files, train.csv, test.csv, and valid.csv
+- Run 'convertToFeatureFiles.py'. It should generate three csv files, train.csv, test.csv, and valid.csv.
 - Run 'train.py'. It should build the NN, and train it using the generated files in the previous step (this may take several minutes, hours, or days depending on the size of the files, the size of the network, and the number of training iterations).
 - Prepare the input image in 'image-input' directory.
 - Run 'classify.py' giving it two cmd arguments, the name if the input image file from the previous step, and the desired name of the output image file. It should generate the corresponding binary mask in 'image-output' directory.
