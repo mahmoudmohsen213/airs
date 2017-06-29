@@ -38,7 +38,7 @@ As mentioned earlier, a per-pixel-classification technique is used, which means 
 The features considered in this model are the RGB values of the pixels surrounding each pixel, which are not enough because road pixels and non-road pixels made of the same material looks the same, for example road pixels and buildings or parking lots. A possible solution is to add a convolutional neural network as another layer to the model before the used neural network, the added CNN can segment the building based on other features and exclude them before further processing.
 
 ## Usage
-- Install python and [Tensorflow](https://www.tensorflow.org/install/) as described [here](https://www.tensorflow.org/install/).
+- Install python and [Tensorflow](https://www.tensorflow.org/) as described [here](https://www.tensorflow.org/install/).
 - Install [pillow](https://python-pillow.org/) as described [here](http://pillow.readthedocs.io/en/3.0.x/installation.html).
 - Prepare the dataset in the directories contained in 'airs-dataset' directory. Each input image must have a corresponding binary (black and white) output image of the same exact dimensions in the corresponding output directory.
 - Run 'convertToFeatureFiles.py'. It should generate three csv files, train.csv, test.csv, and valid.csv.
@@ -53,6 +53,11 @@ The features considered in this model are the RGB values of the pixels surroundi
 ![expected output](/image-output/10228690_15-01.jpg)
 #### Output
 ![output](/image-output/10228690_15-02.jpg)
+
+## Tools
+- Python version 3.5.3
+- [Tensorflow](https://www.tensorflow.org/) version 1.1.0
+- [pillow](https://python-pillow.org/) version 4.1.0
 
 ### Notes
 - The airs-dataset directory contains a set of images to show the correct directory structure expected by the scripts.
