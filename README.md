@@ -27,6 +27,22 @@ The third script is used to test the model accuracy, it loads the model and the 
 
 Classification of an input image is done using the fourth script, it takes the names of the input and output image names as command line arguments, it loads the model and the input image from the 'image-input' directory, generate the feature vector for each pixel, classify it using the loaded classifier, and generate the output image with zero/one value for each pixel based on the classifier prediction for that pixel, then it saves the generated image in 'image-output' directory using the output image name entered in the command line arguments.
 
+## CSV file format
+In the current implmentation the window size if 5 pixels.
+
+The csv files follow a very simple format:
+- each record (line) is a single feature vector with its ground truth outcome.
+- each feature vector consists of the RGB values of pixels contained in a 5x5 window (three integers for each pixel), and a binary value representing the class of the central pixel of that window.
+
+Accordingly, each line in the csv files should consist of (3x5x5) + 1 integers as follows:
+```
+r1, g1, b1, r2, g2, b2, r3, g3, b3, . . . . . , r25, g25, b25, y
+```
+
+Where r13, g13, b13, are the RGB values of the central pixel, and y is the class of the central pixel.
+
+The pixels in the window are ordered in the feature vector in row-major order.
+
 ## Dataset
 [www.cs.toronto.edu/~vmnih/data/](https://www.cs.toronto.edu/~vmnih/data/)
 
