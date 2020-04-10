@@ -11,7 +11,7 @@ def writeInputFile(inputImagePath, inputImageFiles):
     rectSize = 5;
     
     for i in range(len(inputImageFiles)):
-        print(str(datetime.now()) + ': prcessing image', i)
+        print(str(datetime.now()) + ': processing image', i)
         
         metaDataFile = open(inputImagePath + '/' + inputImageFiles[i] + '.meta', 'w')
         dataFile = open(inputImagePath + '/' + inputImageFiles[i] + '.csv', 'w')
