@@ -64,7 +64,7 @@ def writeDataFileOld(inputImagePath, outputImagePath, inputImageFiles, outputIma
         #if(i > 0):
         #    break
         
-        print(str(datetime.now()) + ': prcessing image', i)
+        print(str(datetime.now()) + ': processing image', i)
         inputImage = Image.open(inputImagePath + '/' + inputImageFiles[i])
         inputImageXSize, inputImageYSize = inputImage.size
         inputImagePixels = inputImage.load()
@@ -107,7 +107,7 @@ def writeDataFile(inputImagePath, outputImagePath, inputImageFiles, outputImageF
     linesLimitPerImage = (linesLimit / len(inputImageFiles)) + 1
     
     for i in range(len(inputImageFiles)):
-        print(str(datetime.now()) + ': prcessing image', i)
+        print(str(datetime.now()) + ': processing image', i)
         linesCountPerImage = 0
         inputImage = Image.open(inputImagePath + '/' + inputImageFiles[i])
         inputImageXSize, inputImageYSize = inputImage.size
